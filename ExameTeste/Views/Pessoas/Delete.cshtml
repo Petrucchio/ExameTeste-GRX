@@ -1,0 +1,55 @@
+﻿@model ExameTeste.Models.Pessoa
+
+@{
+    ViewData["Title"] = "Desativar Pessoa";
+}
+<h2> @ViewData["Title"]</h2>
+
+<h3>Tem certeza de que deseja desativar essa pessoa?</h3>
+<div>
+    <h4>Pessoa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDate)
+
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Active)
+
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Active)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FaixaEtaria)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FaixaEtaria.Classificação)
+        </dd>
+    </dl>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index">Voltar a lista</a>
+    </form>
+
+</div>
+

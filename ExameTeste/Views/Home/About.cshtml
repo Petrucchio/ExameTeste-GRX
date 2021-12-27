@@ -1,7 +1,20 @@
 ﻿@{
-    ViewData["Title"] = "About";
+    ViewData["Title"] = "Sobre A Aplicação";
 }
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
 
-<p>Use this area to provide additional information.</p>
+<p>Essa aplicação foi desenvolvida utilizando .Net core (versão 2.1), banco de dados SQLServer e bootstrap 3</p>
+<hr />
+<p>A Aplicação organiza as pessoas pelo seu setor de faixa etaria pré deifinido durante o cadastro</p>
+<p>A validação dos dados cadastrados é realizada tanto pelo JavaScript quanto pelo Controller da Aplicação, assim 
+    prevenindo o cadastro de dados inválidos mesmo quando quando o JavaScript do Usuário estiver desabilitado
+</p>
+<p> O controller conversa com a camada de Services</p>
+<p>Exceptions do nivel de acesso a dado são capturados pelo Service e relançadas na forma de ServicesExceptions para o Controller</p>
+<p>Localização padrão da Aplicação definida como Estados Unidos(América do Norte)</p>
+<p>Em caso do banco de Dados definido não conter dados pré cadastrados o SeedingService Proverá dados e realizará o cadastro automático para a execução</p> 
+<p>Para definir as configurações do Banco de dados, atualize o arquivo appsettings.json</p>
+<p>Operações com o banco de dados funcionam de forma Assíncrona para otimização de tempo da aplicação</p>
+<p>utiliza AntiForgeryToken para impedir falsificação de solicitação entre sites (XSRF/CSRF)</p>
+

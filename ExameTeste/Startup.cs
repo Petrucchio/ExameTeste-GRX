@@ -12,6 +12,8 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using ExameTeste.Data;
 using ExameTeste.Services;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
 
 namespace ExameTeste
 {
@@ -42,11 +44,20 @@ namespace ExameTeste
 builder.MigrationsAssembly("ExameTeste")));
             services.AddScoped<SeedingService>();
             services.AddScoped<PessoaService>();
+            services.AddScoped<FaixaEtariaService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, SeedingService seedingService)
         {
+            var enUS = new CultureInfo("en-US");
+            var localizationOptions = new RequestLocalizationOptions
+            {
+                DefaultRequestCulture = new RequestCulture("en-US"),
+                SupportedCultures = new List<CultureInfo> { enUS },
+                SupportedUICultures = new List<CultureInfo> { enUS },
+            };
+            app.UseRequestLocalization(localizationOptions);
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

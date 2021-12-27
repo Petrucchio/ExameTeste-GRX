@@ -17,7 +17,7 @@ namespace ExameTeste.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Essa pagina foi criada com o intuito de descrever as capacidades da aplicação";
 
             return View();
         }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Farias\\source\\repos\\ExameTeste\\ExameTeste\\ExameTeste.csproj": {}
+    "C:\\Users\\Farias\\Documents\\GitHub\\ExameTeste-GRX\\ExameTeste\\ExameTeste.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Farias\\source\\repos\\ExameTeste\\ExameTeste\\ExameTeste.csproj": {
+    "C:\\Users\\Farias\\Documents\\GitHub\\ExameTeste-GRX\\ExameTeste\\ExameTeste.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Farias\\source\\repos\\ExameTeste\\ExameTeste\\ExameTeste.csproj",
+        "projectUniqueName": "C:\\Users\\Farias\\Documents\\GitHub\\ExameTeste-GRX\\ExameTeste\\ExameTeste.csproj",
         "projectName": "ExameTeste",
-        "projectPath": "C:\\Users\\Farias\\source\\repos\\ExameTeste\\ExameTeste\\ExameTeste.csproj",
+        "projectPath": "C:\\Users\\Farias\\Documents\\GitHub\\ExameTeste-GRX\\ExameTeste\\ExameTeste.csproj",
         "packagesPath": "C:\\Users\\Farias\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Farias\\source\\repos\\ExameTeste\\ExameTeste\\obj\\",
+        "outputPath": "C:\\Users\\Farias\\Documents\\GitHub\\ExameTeste-GRX\\ExameTeste\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

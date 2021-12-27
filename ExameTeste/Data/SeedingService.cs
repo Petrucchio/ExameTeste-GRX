@@ -27,9 +27,9 @@ namespace ExameTeste.Data
 
             Pessoa pessoa1 = new Pessoa(new int (), "Bob Brow", 9, new DateTime(2012, 4, 21), true, g1);
             Pessoa pessoa2 = new Pessoa(new int(), "Hulia Harmony", 8, new DateTime(2013, 6, 12), true, g1);
-            Pessoa pessoa3 = new Pessoa(new int(), "Oprah Ferraz", 22, new DateTime(2000, 4, 8), true, g2);
-            Pessoa pessoa4 = new Pessoa(new int(), "Chris Evans", 32, new DateTime(1989, 8, 12), true, g3);
-            Pessoa pessoa5 = new Pessoa(new int(), "Elaine Elisangela", 19, new DateTime(2003, 5, 15), true,g4);
+            Pessoa pessoa3 = new Pessoa(new int(), "Oprah Ferraz", 22, new DateTime(2000, 4, 8), true, g3);
+            Pessoa pessoa4 = new Pessoa(new int(), "Chris Evans", 32, new DateTime(1989, 8, 12), true, g4);
+            Pessoa pessoa5 = new Pessoa(new int(), "Elaine Elisangela", 19, new DateTime(2003, 5, 15), true,g2);
 
             _context.FaixaEtaria.AddRange(g1, g2, g3, g4);
             _context.Pessoa.AddRange(pessoa1, pessoa2, pessoa3, pessoa4, pessoa5);

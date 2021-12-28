@@ -42,7 +42,7 @@ namespace ExameTeste.Services
             {
                 obj.FaixaEtariaId = 4;
             }
-            else if (faixa >= 50)
+            else if (faixa >= 40)
             {
                 obj.FaixaEtariaId = 5;
             }
@@ -92,18 +92,19 @@ namespace ExameTeste.Services
                 else if (faixa >= 30 && faixa < 40)
                 {
                     obj.FaixaEtariaId = 4;
-                }else if (faixa >= 50)
+                }
+                else if (faixa >= 40)
                 {
                     obj.FaixaEtariaId = 5;
                 }
                 _context.Update(obj);
                 await _context.SaveChangesAsync();
             }
-            catch(DbUpdateConcurrencyException e)
+            catch (DbUpdateConcurrencyException e)
             {
                 throw new DbConcurrencyException(e.Message);
             }
-            
+
         }
         public async Task<List<Pessoa>> FindByDateAsync(DateTime? minDate, DateTime? maxDate)
         {
@@ -141,6 +142,33 @@ namespace ExameTeste.Services
             else
             {
                 result = result.Where(x => x.Name != name);
+            }
+            return await result.Include(x => x.FaixaEtaria).OrderByDescending(x => x.Age).ToListAsync();
+        }
+        public async Task<List<Pessoa>> FindByFaixaEtariaAsync(int FaixaEtaria)
+        {
+            var result = from obj in _context.Pessoa select obj;
+            switch (FaixaEtaria)
+
+            {
+                case 0:
+                    result = result.Where(x => x.FaixaEtariaId == FaixaEtaria);
+                    break;
+                case 1:
+                    result = result.Where(x => x.FaixaEtariaId == FaixaEtaria);
+                    break;
+                case 2:
+                    result = result.Where(x => x.FaixaEtariaId == FaixaEtaria);
+                    break;
+                case 3:
+                    result = result.Where(x => x.FaixaEtariaId == FaixaEtaria);
+                    break;
+                case 4:
+                    result = result.Where(x => x.FaixaEtariaId == FaixaEtaria);
+                    break;
+                case 5:
+                    result = result.Where(x => x.FaixaEtariaId == FaixaEtaria);
+                    break;
             }
             return await result.Include(x => x.FaixaEtaria).OrderByDescending(x => x.Age).ToListAsync();
         }

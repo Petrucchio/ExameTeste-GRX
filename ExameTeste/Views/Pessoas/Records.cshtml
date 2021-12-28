@@ -35,7 +35,7 @@
         <form class="form-horizontal" asp-action="GroupingSearch">
             <fieldset>
                 <legend>Pesquisar por Faixa Etaria</legend>
-               <div class="form-group">
+                <div class="form-group">
                     <label for="minAge" class="col-lg-2 control-label">Idade Minima</label>
                     <div class="col-lg-10">
                         <input type="number" name="minAge" class="form-control" />
@@ -62,10 +62,36 @@
         <form class="form-horizontal" asp-action="NameSearch">
             <fieldset>
                 <legend>Pesquisar por nome</legend>
-               <div class="form-group">
+                <div class="form-group">
                     <label for="Name" class="col-lg-2 control-label">Nome</label>
                     <div class="col-lg-10">
                         <input type="text" name="Name" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button type="submit" class="btn btn-primary">Pesquisar</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <form class="form-horizontal" asp-action="FaixaEtariaSearch">
+            <fieldset>
+                <legend>Pesquisar Faixa Etaria</legend>
+                <div class="form-group">
+                    <label for="FaixaEtaria" class="col-lg-2 control-label">Faixa Etaria</label>
+                    <div class="col-lg-10">
+                        <select name="FaixaEtaria" class="form-control">
+                            <option value=0 selected>0 a 9</option>
+                            <option value=1>10 a 19</option>
+                            <option value=3>20 a 29</option>
+                            <option value=4>30 a 39</option>
+                            <option value=5>40 adiante</option>
+                        </select>
                     </div>
                 </div>
                 <div class="form-group">

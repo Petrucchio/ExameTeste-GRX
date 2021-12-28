@@ -4,7 +4,7 @@
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
 
-<p>Essa aplicação foi desenvolvida utilizando .Net core (versão 2.1), banco de dados SQLServer e bootstrap 3</p>
+<p>Essa aplicação foi desenvolvida utilizando .Net core (versão 2.1),jQuery 3.6.0 , banco de dados SQLServer e bootstrap 3</p>
 <hr />
 <p>A Aplicação organiza as pessoas pelo seu setor de faixa etaria pré deifinido durante o cadastro</p>
 <p>A validação dos dados cadastrados é realizada tanto pelo JavaScript quanto pelo Controller da Aplicação, assim 
@@ -21,4 +21,7 @@
 <p>A Organização da lista é Descrescente por idade, mostrando assim o mais velho até o mais novo</p> 
 <p>Realiza Pesquisas por Data de Nascimento mantendo na barra de pesquisa os valores pesquisados anteriormente, caso nenhum valor seja inserido, a data mínima será o inicio do ano atual e a máxima será a data atual, dados são mostrados em ordem decrescente de acordo com a idade</p>
 <p>Realiza Pesquisas por Idade mantendo na barra de pesquisa os valores pesquisados anteriormente, caso nenhum valor seja indicado, todas as idades serão mostradas em ordem descrescente</p>
+<p>Realiza Pesquisas por Nome mantendo na barra de pesquisa o valor pesquisado anteriormente, caso nenhum valor seja indicado, todas as pessoas serão mostradas em ordem descrescente de acordo com a idade</p>
+<p>Realiza Pesquisas por Faixa Etaria não permitindo campo vazio e ordenando pela idade de modo descrescente</p>
+<p>Em todas as pesquisas somente serão mostradas as pessoas ativas no banco de dados</p>
 

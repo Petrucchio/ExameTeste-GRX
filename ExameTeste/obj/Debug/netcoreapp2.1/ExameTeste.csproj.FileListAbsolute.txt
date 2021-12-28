@@ -89,3 +89,4 @@ C:\Users\Farias\Documents\GitHub\ExameTeste-GRX\ExameTeste\obj\Debug\netcoreapp2
 C:\Users\Farias\Documents\GitHub\ExameTeste-GRX\ExameTeste\obj\Debug\netcoreapp2.1\Razor\Views\Pessoas\SimpleSearch.cshtml.g.cs
 C:\Users\Farias\Documents\GitHub\ExameTeste-GRX\ExameTeste\obj\Debug\netcoreapp2.1\Razor\Views\Pessoas\GroupingSearch.cshtml.g.cs
 C:\Users\Farias\Documents\GitHub\ExameTeste-GRX\ExameTeste\obj\Debug\netcoreapp2.1\Razor\Views\Pessoas\NameSearch.cshtml.g.cs
+C:\Users\Farias\Documents\GitHub\ExameTeste-GRX\ExameTeste\obj\Debug\netcoreapp2.1\Razor\Views\Pessoas\FaixaEtariaSearch.cshtml.g.cs

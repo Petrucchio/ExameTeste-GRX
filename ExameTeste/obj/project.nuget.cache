@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "o4AIlrYqs5160JQxh8s8E31Pe/K3wk6xWNzkWc2xKsERx3phL0w4UUXNiUfWDkQasD6QA87+cJ1asPNdq7Pezg==",
+  "dgSpecHash": "WpVgYuj8Su6Pcyl8FOr7YNNe+yyRROeUBdOSEBI4xkCVibpxV3vpV9E8XLprFvjy59DPGJkYeFh9B4rTJ7N9yQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Farias\\Documents\\GitHub\\ExameTeste-GRX\\ExameTeste\\ExameTeste.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Farias\\.nuget\\packages\\jquery\\3.6.0\\jquery.3.6.0.nupkg.sha512",
     "C:\\Users\\Farias\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Users\\Farias\\.nuget\\packages\\microsoft.aspnetcore\\2.1.7\\microsoft.aspnetcore.2.1.7.nupkg.sha512",
     "C:\\Users\\Farias\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.1.1\\microsoft.aspnetcore.antiforgery.2.1.1.nupkg.sha512",

@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<ExameTeste.Models.Pessoa>
 
 @{
-    ViewData["Title"] = "Pesquisa por Idade";
+    ViewData["Title"] = "Pesquisa por Data de Nascimento";
 }
 
 <h2>@ViewData["Title"]</h2>
@@ -10,13 +10,15 @@
     <div class="container-fluid">
         <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
-                <div class="form-group">
-                    <label for="minAge">Idade Mínima</label>
-                    <input type="number" class="form-control" name="minAge" value=@ViewData["minAge"] />
-                </div>
-                <div class="form-group">
-                    <label for="maxAge">Idade Máxima</label>
-                    <input type="number" class="form-control" name="maxAge" value=@ViewData["maxAge"] />
+                <label for="FaixaEtaria" class="col-lg-2 control-label">Faixa Etaria</label>
+                <div class="col-lg-10">
+                    <select name="FaixaEtaria" class="form-control" value=@ViewData["FaixaEtaria"]>
+                        <option value=0>0 a 9</option>
+                        <option value=1>10 a 19</option>
+                        <option value=3>20 a 29</option>
+                        <option value=4>30 a 39</option>
+                        <option value=5>40 adiante</option>
+                    </select>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Pequisar</button>

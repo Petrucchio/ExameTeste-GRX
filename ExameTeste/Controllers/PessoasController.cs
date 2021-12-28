@@ -169,5 +169,11 @@ namespace ExameTeste.Controllers
             var result = await _pessoaService.FindByNameAsync(Name);
             return View(result);
         }
+        public async Task<IActionResult> FaixaEtariaSearch(int FaixaEtaria)
+        {
+            ViewData["FaixaEtaria"] = FaixaEtaria;
+            var result = await _pessoaService.FindByFaixaEtariaAsync(FaixaEtaria);
+            return View(result);
+        }
     }
 }

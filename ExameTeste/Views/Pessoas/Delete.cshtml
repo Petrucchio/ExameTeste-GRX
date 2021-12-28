@@ -36,7 +36,7 @@
 
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Active)
+            @Html.DisplayFor(model => model.Active )
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.FaixaEtaria)
@@ -47,7 +47,7 @@
     </dl>
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" />
+        <input type="submit" value="Delete" onclick="return confirm('Tem certeza de que deseja deletar essa pessoa?');"  class="btn btn-danger" />
         <a asp-action="Index">Voltar a lista</a>
     </form>
 

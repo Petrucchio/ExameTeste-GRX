@@ -25,16 +25,12 @@
                 <span asp-validation-for="pessoa.BirthDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <div class="checkbox">
-                    <label>
-                        <input asp-for="pessoa.Active" /> @Html.DisplayNameFor(model => model.pessoa.Active)
-                    </label>
-                </div>
+                <input type="hidden" asp-for="pessoa.Active" value="true">
             </div>
-            <div class="form-group">
+            @*<div class="form-group">
                 <label asp-for="pessoa.FaixaEtariaId" class="control-label"></label>
                 <select asp-for="pessoa.FaixaEtariaId" asp-items="@(new SelectList(Model.FaixaEtarias,"Id","Classificação"))" class="form-control"></select>
-            </div>
+            </div>*@
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-defautl" />
             </div>

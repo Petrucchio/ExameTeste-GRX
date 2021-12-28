@@ -5,6 +5,7 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using ExameTeste.Services.Exceptions;
 using System.Threading.Tasks;
+using System;
 
 namespace ExameTeste.Services
 {
@@ -19,11 +20,32 @@ namespace ExameTeste.Services
 
         public async Task<List<Pessoa>> FindAllAsync()
         {
-            return await _context.Pessoa.Include(obj => obj.FaixaEtaria).ToListAsync();
+            return await _context.Pessoa.Include(obj => obj.FaixaEtaria).OrderByDescending(x => x.Age).ToListAsync();
         }
 
         public async Task InsertAsync(Pessoa obj)
         {
+            var faixa = obj.Age;
+            if (faixa < 10 && faixa > 0)
+            {
+                obj.FaixaEtariaId = 1;
+            }
+            else if (faixa >= 10 && faixa < 20)
+            {
+                obj.FaixaEtariaId = 2;
+            }
+            else if (faixa >= 20 && faixa < 30)
+            {
+                obj.FaixaEtariaId = 3;
+            }
+            else if (faixa >= 30 && faixa < 40)
+            {
+                obj.FaixaEtariaId = 4;
+            }
+            else if (faixa >= 50)
+            {
+                obj.FaixaEtariaId = 5;
+            }
             _context.Add(obj);
             await _context.SaveChangesAsync();
         }
@@ -36,7 +58,8 @@ namespace ExameTeste.Services
             try
             {
                 var obj = await _context.Pessoa.FindAsync(id);
-                _context.Pessoa.Remove(obj);
+                obj.Active = false;
+                _context.Pessoa.Update(obj);
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateException e)
@@ -53,6 +76,26 @@ namespace ExameTeste.Services
             }
             try
             {
+                var faixa = obj.Age;
+                if (faixa < 10 && faixa > 0)
+                {
+                    obj.FaixaEtariaId = 1;
+                }
+                else if (faixa >= 10 && faixa < 20)
+                {
+                    obj.FaixaEtariaId = 2;
+                }
+                else if (faixa >= 20 && faixa < 30)
+                {
+                    obj.FaixaEtariaId = 3;
+                }
+                else if (faixa >= 30 && faixa < 40)
+                {
+                    obj.FaixaEtariaId = 4;
+                }else if (faixa >= 50)
+                {
+                    obj.FaixaEtariaId = 5;
+                }
                 _context.Update(obj);
                 await _context.SaveChangesAsync();
             }
@@ -62,5 +105,47 @@ namespace ExameTeste.Services
             }
             
         }
+        public async Task<List<Pessoa>> FindByDateAsync(DateTime? minDate, DateTime? maxDate)
+        {
+            var result = from obj in _context.Pessoa select obj;
+            if (minDate.HasValue)
+            {
+                result = result.Where(x => x.BirthDate >= minDate.Value);
+            }
+            if (maxDate.HasValue)
+            {
+                result = result.Where(x => x.BirthDate <= maxDate.Value);
+            }
+            return await result.Include(x => x.FaixaEtaria).OrderByDescending(x => x.Age).ToListAsync();
+        }
+        public async Task<List<Pessoa>> FindByAgeAsync(int? minAge, int? maxAge)
+        {
+            var result = from obj in _context.Pessoa select obj;
+            if (minAge.HasValue)
+            {
+                result = result.Where(x => x.Age >= minAge.Value);
+            }
+            if (maxAge.HasValue)
+            {
+                result = result.Where(x => x.Age <= maxAge.Value);
+            }
+            return await result.Include(x => x.FaixaEtaria).OrderByDescending(x => x.Age).ToListAsync();
+        }
+        public async Task<List<Pessoa>> FindByNameAsync(string name)
+        {
+            var result = from obj in _context.Pessoa select obj;
+            if (!string.IsNullOrEmpty(name))
+            {
+                result = result.Where(x => x.Name == name);
+            }
+            else
+            {
+                result = result.Where(x => x.Name != name);
+            }
+            return await result.Include(x => x.FaixaEtaria).OrderByDescending(x => x.Age).ToListAsync();
+        }
+
+
+
     }
 }

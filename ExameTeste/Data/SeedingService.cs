@@ -24,6 +24,7 @@ namespace ExameTeste.Data
             FaixaEtaria g2 = new FaixaEtaria(new int(), "10 a 19");
             FaixaEtaria g3 = new FaixaEtaria(new int(), "20 a 29");
             FaixaEtaria g4 = new FaixaEtaria(new int(), "30 a 39");
+            FaixaEtaria g5 = new FaixaEtaria(new int(), "40 Adiante");
 
             Pessoa pessoa1 = new Pessoa(new int (), "Bob Brow", 9, new DateTime(2012, 4, 21), true, g1);
             Pessoa pessoa2 = new Pessoa(new int(), "Hulia Harmony", 8, new DateTime(2013, 6, 12), true, g1);

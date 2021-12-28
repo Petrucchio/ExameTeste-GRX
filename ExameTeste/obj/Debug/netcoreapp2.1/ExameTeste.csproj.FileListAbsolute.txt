@@ -85,3 +85,7 @@ C:\Users\Farias\Documents\GitHub\ExameTeste-GRX\ExameTeste\obj\Debug\netcoreapp2
 C:\Users\Farias\Documents\GitHub\ExameTeste-GRX\ExameTeste\obj\Debug\netcoreapp2.1\Razor\Views\Pessoas\Delete.cshtml.g.cs
 C:\Users\Farias\Documents\GitHub\ExameTeste-GRX\ExameTeste\obj\Debug\netcoreapp2.1\Razor\Views\Pessoas\Details.cshtml.g.cs
 C:\Users\Farias\Documents\GitHub\ExameTeste-GRX\ExameTeste\obj\Debug\netcoreapp2.1\Razor\Views\Pessoas\Edit.cshtml.g.cs
+C:\Users\Farias\Documents\GitHub\ExameTeste-GRX\ExameTeste\obj\Debug\netcoreapp2.1\Razor\Views\Pessoas\Records.cshtml.g.cs
+C:\Users\Farias\Documents\GitHub\ExameTeste-GRX\ExameTeste\obj\Debug\netcoreapp2.1\Razor\Views\Pessoas\SimpleSearch.cshtml.g.cs
+C:\Users\Farias\Documents\GitHub\ExameTeste-GRX\ExameTeste\obj\Debug\netcoreapp2.1\Razor\Views\Pessoas\GroupingSearch.cshtml.g.cs
+C:\Users\Farias\Documents\GitHub\ExameTeste-GRX\ExameTeste\obj\Debug\netcoreapp2.1\Razor\Views\Pessoas\NameSearch.cshtml.g.cs

@@ -30,10 +30,10 @@ namespace ExameTeste.Models
             pessoas.Remove(filtro);
         }
 
-        public void Limite (DateTime initial, DateTime final)
+        public void Limite (int initial, int final)
         {
-           var filtrar = pessoas.Where(filtro => filtro.BirthDate >= initial
-           && filtro.BirthDate <=final 
+           var filtrar = pessoas.Where(filtro => filtro.Age >= initial
+           && filtro.Age <=final 
            && filtro.Active.Equals(true))
                 .OrderBy(filtro => filtro.Age);
         }

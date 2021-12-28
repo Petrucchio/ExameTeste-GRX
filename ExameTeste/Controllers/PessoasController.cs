@@ -3,6 +3,7 @@ using ExameTeste.Models.ViewModels;
 using ExameTeste.Services;
 using ExameTeste.Services.Exceptions;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
@@ -17,6 +18,11 @@ namespace ExameTeste.Controllers
         {
             _pessoaService = pessoaService; 
             _faixaEtariaService = faixaEtariaService;
+        }
+        public async Task<IActionResult> Records()
+        {
+            var list = await _pessoaService.FindAllAsync();
+            return View(list);
         }
         public async Task<IActionResult> Index()
         {
@@ -134,6 +140,34 @@ namespace ExameTeste.Controllers
                 RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
             };
             return View(viewModel);
+        }
+        public async Task<IActionResult> SimpleSearch(DateTime? minDate, DateTime? maxDate)
+        {
+            if (!minDate.HasValue)
+            {
+                minDate = new DateTime(DateTime.Now.Year, 1, 1);
+            }
+            if (!maxDate.HasValue)
+            {
+                maxDate = DateTime.Now;
+            }
+            ViewData["minDate"] = minDate.Value.ToString("yyyy-MM-dd");
+            ViewData["maxDate"] = maxDate.Value.ToString("yyyy-MM-dd");
+            var result = await _pessoaService.FindByDateAsync(minDate, maxDate);
+            return View(result);
+        }
+        public async Task<IActionResult> GroupingSearch(int? minAge, int? maxAge)
+        {
+            ViewData["minAge"] = minAge;
+            ViewData["maxAge"] = maxAge;
+            var result = await _pessoaService.FindByAgeAsync(minAge, maxAge);
+            return View(result);
+        }
+        public async Task<IActionResult> NameSearch(string Name)
+        {
+            ViewData["Name"] = Name;
+            var result = await _pessoaService.FindByNameAsync(Name);
+            return View(result);
         }
     }
 }
